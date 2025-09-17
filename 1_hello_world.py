@@ -1,5 +1,5 @@
 #
-# James
+# Kseniia
 # Print Hello World!
 #
 
