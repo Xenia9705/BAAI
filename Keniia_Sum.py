@@ -1,11 +1,15 @@
 #
 # Kseniia, 2025/09/24
 # File: Kseniia_Sum.py
-# Short description of the task
+# Add two numbers then print
 #
 
 # 1. Input
+X = 8
+Y = 7
 
 # 2. Process
+sum = X + Y 
 
 # 3. Output
+print (f'Result {sum}')
