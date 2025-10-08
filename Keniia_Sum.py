@@ -13,7 +13,10 @@ Y = input('Second number: ')
 # 2. Process
 X1 = int(X)  # SECOND SOLUTION
 Y2 = int(Y)
-sum = X1 + Y2
+
+sum = X + Y
+sum1 = X1 + Y2
 
 # 3. Output
 print(f'Result {sum}')
+print(f'Result {sum1}')
