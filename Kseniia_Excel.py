@@ -22,10 +22,10 @@ print("Sum per numeric column:")
 print(numeric_sums)
 print("\nGrand total of all numeric values:", grand_total)
 
+# 4. Output to Excel
+
 results = numeric_sums.to_frame(name='Sum')
 results.loc['Grand Total'] = grand_total
-
-# 4. Output to Excel
 results.to_excel('Financial_Sample_Summary.xlsx')
 
 print("✅ Results saved to 'Financial_Sample_Summary.xlsx'")
