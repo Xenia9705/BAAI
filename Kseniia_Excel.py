@@ -13,7 +13,6 @@ df = pd.read_excel('Financial_Sample.xlsx')
 # 2. Process
 
 numeric_sums = df.select_dtypes(include='number').sum()
-
 grand_total = numeric_sums.sum()
 
 # 3. Output
