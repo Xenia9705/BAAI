@@ -9,7 +9,7 @@ X = 8
 Y = 7
 
 # 2. Process
-sum = X + Y 
+sum = X + Y
 
 # 3. Output
-print (f'Result {sum}')
+print(f'Result {sum}')
