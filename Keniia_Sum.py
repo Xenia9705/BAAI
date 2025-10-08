@@ -5,13 +5,13 @@
 #
 
 # 1. Input
-# X = int(input('First number: '))
+# X = int(input('First number: ')) FIRST SOLUTION
 # Y = int(input('Second number: '))
 X = input('First number: ')
-Y = input('Second number: ')3
+Y = input('Second number: ')
 
 # 2. Process
-X1 = int(X)
+X1 = int(X)  # SECOND SOLUTION
 Y2 = int(Y)
 sum = X1 + Y2
 
