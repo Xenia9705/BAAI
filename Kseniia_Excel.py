@@ -21,3 +21,11 @@ grand_total = numeric_sums.sum()
 print("Sum per numeric column:")
 print(numeric_sums)
 print("\nGrand total of all numeric values:", grand_total)
+
+results = numeric_sums.to_frame(name='Sum')  # convert Series to DataFrame
+results.loc['Grand Total'] = grand_total     # add a final row
+
+# 4. Output to Excel
+results.to_excel('Financial_Sample_Summary.xlsx')
+
+print("✅ Results saved to 'Financial_Sample_Summary.xlsx'")
