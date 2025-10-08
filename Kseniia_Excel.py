@@ -12,5 +12,11 @@ df = pd.read_excel('Financial_Sample.xlsx')
 
 # 2. Process
 
+sum = df.select_dtypes(include='number').sum()
+# numeric_sum = df.sum(numeric_only=True)
+
 # 3. Output
-print(df)
+# print("Sum of numeric columns:")
+# print(numeric_sum)
+
+print(f'Sum{sum}')
