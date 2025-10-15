@@ -1,11 +1,3 @@
-#
-# Kseniia, 2025/10/15
-# File: Kseniia_Product_Discount_Calculator.py
-# Short description of the task
-#
-# Initialize tracking variables
-
-# 1. Input
 total_original = 0
 total_discount_amount = 0
 total_final = 0
@@ -23,14 +15,13 @@ products = [
     {"name": "Headphones", "price": 150, "category": "Electronics"}
 ]
 
-# 2. Process
-
+# ✅ Loop through each product
 for product in products:
     name = product["name"]
     price = product["price"]
     category = product["category"]
 
-    # Determine discount
+    # ✅ Calculate discount based on category and price
     if category == "Electronics":
         if price >= 1000:
             discount_given = 20
@@ -52,13 +43,17 @@ for product in products:
     discount = price * (discount_given / 100)
     final_price = price - discount
 
+    # ✅ Update totals
     total_original += price
     total_discount_amount += discount
     total_final += final_price
 
+    # ✅ Print product info
     print(f"Product: {name} | Category: {category} | Original Price: ${price:.2f} | "
           f"Discount: {discount_given}% | Final Price: ${final_price:.2f}")
-# TODO: Update totals
-# Print summary
-print("\n=== SUMMARY ===")
-# TODO: Print total statistics
+
+# ✅ Print totals at the end
+print("\n=== TOTALS ===")
+print(f"Original Total: ${total_original:.2f}")
+print(f"Total Discount: ${total_discount_amount:.2f}")
+print(f"Final Total: ${total_final:.2f}")
