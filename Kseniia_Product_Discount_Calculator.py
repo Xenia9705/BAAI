@@ -6,6 +6,7 @@
 # Initialize tracking variables
 
 # 1. Input
+
 total_original = 0
 total_discount_amount = 0
 total_final = 0
@@ -48,7 +49,7 @@ for product in products:
     elif category == "Books":
         discount_given = 10
 
-    # ✅ Calculate final price
+    # Calculate final price
     discount = price * (discount_given / 100)
     final_price = price - discount
 
@@ -56,8 +57,8 @@ for product in products:
     total_discount_amount += discount
     total_final += final_price
 
-    print(f"Product: {name} | Category: {category} | Original Price: ${price:.2f} | "
-          f"Discount: {discount_given}% | Final Price: ${final_price:.2f}")
+    print(f"Product: {name} | Category: {category} | Original Price: ${price} | Discount: {discount_given}% | Final Price: ${final_price}")
+
 # TODO: Update totals
 # Print summary
 print("\n=== SUMMARY ===")
