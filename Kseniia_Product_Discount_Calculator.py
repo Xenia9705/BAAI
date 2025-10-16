@@ -82,6 +82,8 @@ for product in products:
         category_counts[category] = 0
     category_counts[category] += 1
 
+# 3. Output
+
 print("\n=== SUMMARY ===")
 
 print(f"Category_Count: {category_counts}")
