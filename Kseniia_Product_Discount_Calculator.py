@@ -1,18 +1,15 @@
-#
 # Kseniia, 2025/10/15
 # File: Kseniia_Product_Discount_Calculator.py
-# Short description of the task
+# Creating a discount calculator
 #
-# Initialize tracking variables
 
 # 1. Input
 
 total_original = 0
 total_discount_amount = 0
 total_final = 0
-
-print("=== PRODUCT DISCOUNT CALCULATOR ===\n")
-
+discount_percentages = []
+category_counts = {}
 products = [
     {"name": "Laptop", "price": 1200, "category": "Electronics"},
     {"name": "Shirt", "price": 45, "category": "Clothing"},
@@ -25,6 +22,8 @@ products = [
 ]
 
 # 2. Process
+
+print("=== PRODUCT DISCOUNT CALCULATOR ===\n")
 
 for product in products:
     name = product["name"]
@@ -49,7 +48,10 @@ for product in products:
     elif category == "Books":
         discount_given = 10
 
+    discount_percentages.append(discount_given)
+
     # Calculate final price
+
     discount = price * (discount_given / 100)
     final_price = price - discount
 
@@ -57,9 +59,34 @@ for product in products:
     total_discount_amount += discount
     total_final += final_price
 
-    print(f"Product: {name} | Category: {category} | Original Price: ${price} | Discount: {discount_given}% | Final Price: ${final_price}")
+    details = [
+        ("Product", name),
+        ("Category", category),
+        ("Original Price", f"${price}"),
+        ("Discount", f"{discount_given}%"),
+        ("Final Price", f"${final_price}")
+    ]
 
-# TODO: Update totals
-# Print summary
+    for label, value in details:
+        print(f"{label}: {value}")
+
+    print()
+
+    def discount_amount(product):
+        return discount
+
+    highest_discount_product = max(products, key=discount_amount)
+    average_discount = sum(discount_percentages)/len(discount_percentages)
+
+    if category not in category_counts:
+        category_counts[category] = 0
+    category_counts[category] += 1
+
 print("\n=== SUMMARY ===")
-# TODO: Print total statistics
+
+print(f"Category_Count: {category_counts}")
+print(f"Total_Oritinal: {total_original}")
+print(f"Total_Dicount_Amount: {total_discount_amount}")
+print(f"Total_Final: {total_final}")
+print(f"Highest_Discount_Product: {highest_discount_product['name']}")
+print(f"Average_Discount: {average_discount}%")
