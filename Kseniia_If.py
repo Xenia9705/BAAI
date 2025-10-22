@@ -5,26 +5,12 @@
 #
 
 # 1. Input
-order_values = [120, 450, 80, 300, 650]
+
+order_value = [120, 450, 80, 300, 650]
 total_revenue = 0
 
-# 2. Process
-for order in order_values:
+for order in order_value:
     total_revenue += order
-    print(f"Processing order: ${order}")
+    print(f"Processing order: $ {order}")
 
-print(f"Total Revenue: $ {total_revenue}")
-order_values = [120, 450, 80, 300, 650]
-total_revenue = 0
-count = 0
-for order in order_values:
-    total_revenue += order
-    count += 1
-
-# 2. Process
-for order in order_values:
-    total_revenue += order
-    print(f"Processing order: ${order}")
-
-print(f"Total Revenue: $ {total_revenue}")
-print(f"Total items: {count}")
+print(f"\nTotal Revenue: $ {total_revenue}")
