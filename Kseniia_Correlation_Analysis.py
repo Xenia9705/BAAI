@@ -8,11 +8,10 @@
 
 import pandas as pd
 
-# 2. Process
-
 df = pd.read_csv('Simple_Data.csv')
 
 
+# 2. Process
 missing_values = df.isnull().sum()
 
 # 3. Output
