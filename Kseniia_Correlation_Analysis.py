@@ -8,6 +8,8 @@
 
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 from scipy import stats
 
@@ -43,3 +45,8 @@ print(correlation_matrix.round(3))
 # print('Missing Values Per Column')
 # print(missing_values)
 # print(f"\nTotal missing values: {missing_values.sum()}")
+
+sns.heatmap(correlation_matrix)
+plt.title('Kseniia is the most intelligent person in the world')
+plt.tight_layout()
+plt.show()
