@@ -10,7 +10,8 @@ import pandas as pd
 
 # 2. Process
 
-df = pd.read_csv('Correlation_Analysis_Data.csv')
+df = pd.read_csv('Simple_Data.csv')
+
 
 missing_values = df.isnull().sum()
 
