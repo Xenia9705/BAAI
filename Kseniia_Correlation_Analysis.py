@@ -23,7 +23,7 @@ df.iloc[:, 1:6]
 # 2. Process
 correlation_matrix = df.iloc[:, 1:6].corr()
 
-print(correlation_matrix)
+print(correlation_matrix.round(3))
 
 # missing_values = df.isnull().sum()
 # print(df.isnull().sum())
