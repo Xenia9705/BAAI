@@ -7,16 +7,35 @@
 # 1. Input
 
 import pandas as pd
+import numpy as np
 
-df = pd.read_csv('Simple_Data.csv')
+from scipy import stats
 
+df = pd.read_csv('Correlation_Analysis_Data.csv')
+
+df.info()
+df.iloc[:, 1:6]
+# correlation, p_value = stats.pearsonr(
+#     df['Marketing_Spend'],
+#     df['Sales_Revenue']
+# )
 
 # 2. Process
+correlation_matrix = df.iloc[:, 1:6].corr()
+
+print(correlation_matrix)
+
 # missing_values = df.isnull().sum()
-print(df.isnull().sum())
-print(df.isnull().sum().sum())
+# print(df.isnull().sum())
+# print(df.isnull().sum().sum())
 
 # 3. Output
+
+# print(f'Correlation coefficient: {correlation:.2f}')
+# print(f'P-value: {p_value:.4e}')
+
+# if p_value < 0.05:
+#     print("The correlation is statistically significant!")
 
 # print("Data loaded successfully!")
 # print(f"Dataset shape: {df.shape}")
