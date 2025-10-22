@@ -15,6 +15,7 @@ df = pd.read_csv('Simple_Data.csv')
 # missing_values = df.isnull().sum()
 print(df.isnull().sum())
 print(df.isnull().sum().sum())
+
 # 3. Output
 
 # print("Data loaded successfully!")
